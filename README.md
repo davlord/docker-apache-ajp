@@ -1,9 +1,6 @@
 # docker-apache-ajp
 Dockerized apache with mod_proxy_ajp enabled.
 
-# davlord/naemon
-Dockerfile to build a [Naemon](http://www.naemon.org/) image for the [Docker](https://www.docker.com/products/docker-engine) opensource container platform.
-
 ## Docker Compose Example
 Example `docker-compose.yml` file:
 ```bash
