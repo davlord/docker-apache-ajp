@@ -13,7 +13,7 @@ apache:
      - "80:80"
      
 tomcat:
-  image: tomcat:9-jre8
+  image: tomcat
   container_name: tomcat
   expose:
     - "8009"
