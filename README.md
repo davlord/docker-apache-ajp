@@ -1,5 +1,14 @@
 # docker-apache-ajp
-Dockerized apache with mod_proxy_ajp enabled.
+Dockerized Apache 2 with ability to enable modules on runtime
+
+## Configuration
+### Environment Variables
+#### A2ENMOD
+Will allow you to enable multiple apache modules (coma separated).
+```
+A2ENMOD=proxy,proxy_ajp
+```
+It will trigger a a2enmod command as provided in Debian based distributions.
 
 ## Docker Compose Example
 Example `docker-compose.yml` file:
@@ -9,6 +18,8 @@ apache:
    volumes:
      - ./logs:/var/log/apache2/
      - ./mysite.conf:/etc/apache2/sites-enabled/mysite.conf:ro
+   environment:
+    - A2ENMOD=proxy,proxy_ajp
    ports:
      - "80:80"
      
