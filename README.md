@@ -1,4 +1,4 @@
-# docker-apache-ajp
+# docker-apache-modules
 Dockerized Apache 2 with ability to enable modules on runtime
 
 ## Configuration
@@ -10,7 +10,8 @@ A2ENMOD=proxy,proxy_ajp
 ```
 It will trigger a a2enmod command as provided in Debian based distributions.
 
-## Docker Compose Example
+## Examples
+### Docker Compose with Proxy AJP module 
 Example `docker-compose.yml` file:
 ```bash
 apache:
